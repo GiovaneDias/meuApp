@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'tela1',
+    loadChildren: () => import('./tela1/tela1.module').then( m => m.Tela1PageModule)
+  },
+  {
+    path: 'tela2',
+    loadChildren: () => import('./tela2/tela2.module').then( m => m.Tela2PageModule)
+  },
+  {
+    path: 'tela3',
+    loadChildren: () => import('./tela3/tela3.module').then( m => m.Tela3PageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
 ];
 
 @NgModule({

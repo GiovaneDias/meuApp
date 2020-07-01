@@ -1,3 +1,34 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content">
+      
+      <ion-list>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/tela1">
+            <ion-icon name="logo-instagram" slot="start" color="danger"></ion-icon>
+            <ion-label>Instagram</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/tela2">
+            <ion-icon name="logo-facebook" slot="start" color="tertiary"></ion-icon>
+            <ion-label>Facebook</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      
+        <ion-menu-toggle>
+          <ion-item routerLink="/tela3">
+            <ion-icon name="logo-twitter" slot="start" color="primary"></ion-icon>
+            <ion-label>Twitter</ion-label>
+          </ion-item>  
+        </ion-menu-toggle>
+
+      </ion-list>
+
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+  
 </ion-app>
